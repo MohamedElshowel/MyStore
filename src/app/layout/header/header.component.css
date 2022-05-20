@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+  background: #33B5E5;
+  color: #fff;
+  padding: 16px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #103c4d;
+}
