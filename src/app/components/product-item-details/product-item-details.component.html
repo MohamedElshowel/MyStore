@@ -1,1 +1,25 @@
-<p>product-item-details works!</p>
+<div class="item-details-container">
+  <div class="item-details" *ngIf="product">
+    <div>
+      <img class="product-image" [src]="product.url" />
+    </div>
+
+    <div class="details">
+      <h2>{{ product.name }}</h2>
+      <p>${{ product.price }}</p>
+      <p>{{ product.description }}</p>
+
+      <select class="select-input">
+        <option *ngFor="let number of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">{{ number }}</option>
+      </select>
+
+      <button (click)="addToCart(product)">Add to cart</button>
+
+      <a class="back-link" routerLink="/">⬅ Back to product list</a>
+    </div>
+  </div>
+
+  <div *ngIf="!product">
+    <h3 class="no-data">Sorry! This product is not available</h3>
+  </div>
+</div>

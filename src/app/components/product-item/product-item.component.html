@@ -1,5 +1,9 @@
 <div class="product-container" *ngIf="product">
-  <img class="product-image" [src]="product.url" />
+
+  <a [routerLink]="['/product', product.id]" [title]="'View ' + product.name + ' details'">
+    <img class="product-image" [src]="product.url" />
+  </a>
+
   <p>{{ product.name }}</p>
   <p>${{ product.price }}</p>
 
