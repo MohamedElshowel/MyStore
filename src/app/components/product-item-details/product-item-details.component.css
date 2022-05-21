@@ -37,9 +37,9 @@ img {
 }
 
 .back-link:hover {
-  color: #103c4d;
+  color: #1c6988;
 }
 
-.no-data {
-  margin-top: 20vh;
+.no-data-message {
+  margin-top: 64px;
 }

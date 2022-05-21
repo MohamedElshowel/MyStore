@@ -9,7 +9,7 @@
       <p>${{ product.price }}</p>
       <p>{{ product.description }}</p>
 
-      <select class="select-input">
+      <select class="select-input" (change)="changeQuantity($event)">
         <option *ngFor="let number of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">{{ number }}</option>
       </select>
 
@@ -20,6 +20,6 @@
   </div>
 
   <div *ngIf="!product">
-    <h3 class="no-data">Sorry! This product is not available</h3>
+    <h3 class="no-data-message">Sorry! This product is not available</h3>
   </div>
 </div>

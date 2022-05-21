@@ -17,7 +17,7 @@ export class ProductItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeAmount(event: Event): void {
+  changeQuantity(event: Event): void {
     this.quantity = +(event.target as HTMLInputElement).value;
   }
 
