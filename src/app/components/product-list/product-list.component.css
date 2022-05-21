@@ -5,3 +5,7 @@
   max-width: 1024px;
   margin: 0 auto 64px;
 }
+
+.no-data {
+  margin-top: 20vh;
+}
