@@ -40,4 +40,10 @@ export class CartService {
     this.cartItems.splice(itemIndex, 1);
     return this.cartItems;
   }
+
+  getTotalPrice(): string {
+    let totalPrice = 0;
+    this.cartItems.forEach(item => totalPrice += item.product.price * item.quantity)
+    return totalPrice.toFixed(2);
+  }
 }

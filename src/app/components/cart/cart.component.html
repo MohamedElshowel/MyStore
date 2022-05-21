@@ -5,7 +5,7 @@
     <h3>Total: ${{ getTotalPrice() }}</h3>
   </div>
 
-  <app-cart-form class="cart-panel" (onSubmitForm)="onOrderSubmit()"></app-cart-form>
+  <app-cart-form class="cart-panel" (onSubmitForm)="onOrderSubmit($event)"></app-cart-form>
 </div>
 
 <div class="no-data-container" *ngIf="!items.length">

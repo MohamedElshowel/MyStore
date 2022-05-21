@@ -4,5 +4,6 @@ export interface Order {
   fullName: string;
   address: string;
   creditCardNum: number | string;
-  items: CartItem[];
+  items?: CartItem[];
+  totalPrice?: number | string;
 }

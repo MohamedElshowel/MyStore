@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Order } from 'src/app/models/Order';
 
 @Component({
   selector: 'app-cart-form',
@@ -11,7 +12,7 @@ export class CartFormComponent implements OnInit {
 
   fullName: string = '';
   address: string = '';
-  cardNumber: number | string = '';
+  creditCardNum: number | string = '';
 
   constructor() { }
 
@@ -19,10 +20,15 @@ export class CartFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.onSubmitForm.emit();
+    const userData: Order = {
+      fullName: this.fullName,
+      address: this.address,
+      creditCardNum: this.creditCardNum,
+    }
+    this.onSubmitForm.emit(userData);
     // Reset Form Field Values
     this.fullName = '';
     this.address = '';
-    this.cardNumber = '';
+    this.creditCardNum = '';
   }
 }
