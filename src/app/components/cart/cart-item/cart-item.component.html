@@ -1,0 +1,13 @@
+<div class="cart-item">
+  <img [src]="item.product.url" />
+
+  <div class="cart-item-details">
+    <h4>{{ item.product.name }}</h4>
+    <p>${{ item.product.price }}</p>
+
+    <div class="cart-item-quantity">
+      <label for="quantity">Quantity: </label>
+      <input type="number" name="quantity" class="number-input" [value]="item.quantity" min="0" max="10" />
+    </div>
+  </div>
+</div>

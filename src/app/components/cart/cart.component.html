@@ -1,1 +1,14 @@
-<p>cart works!</p>
+<div class="cart-container" *ngIf="items.length">
+
+  <div class="cart-panel">
+    <app-cart-item *ngFor="let item of items" [item]="item"></app-cart-item>
+    <h3>Total: ${{ getTotalPrice() }}</h3>
+  </div>
+
+  <app-cart-form class="cart-panel"></app-cart-form>
+</div>
+
+<div class="no-data-container" *ngIf="!items.length">
+  <h3 class="no-data-message">The cart is empty! 🛒</h3>
+  <button routerLink="/">Browse product list</button>
+</div>
