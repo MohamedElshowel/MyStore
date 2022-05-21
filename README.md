@@ -1,6 +1,6 @@
 # MyStore
 
-**MyStore** is an e-commerce app to buy explore products, add them to cart, and checkout.
+**MyStore** is a responsive e-commerce app to buy explore products, add them to cart, and checkout.
 
 This app is built with [Angular](https://angular.io) 13.3
 
@@ -39,11 +39,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Screenshots
 
-#### Home page (Product List)
+### Home page (Product List)
 ![Home page screenshot](./images/products-list.png)
-#### Product Details
+### Product Details
 ![Product Details screenshot](./images/product-details.png)
-#### Cart
+### Cart
 ![Cart screenshot](./images/cart.png)
 
 ### Order Confirmation
