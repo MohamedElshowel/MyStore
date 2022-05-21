@@ -22,3 +22,15 @@ img {
   width: 70px;
   text-align: center;
 }
+
+.remove-item {
+  background-color: darkred;
+  width: 85px;
+  padding: 5px;
+  box-shadow: none;
+  align-self: center;
+}
+
+.remove-item:hover {
+  background-color: red;
+}

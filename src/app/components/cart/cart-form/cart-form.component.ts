@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cart-form',
@@ -7,12 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartFormComponent implements OnInit {
 
+  @Output() onSubmitForm = new EventEmitter();
+
+  fullName: string = '';
+  address: string = '';
+  cardNumber: number | string = '';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    alert('submitted!');
+    this.onSubmitForm.emit();
+    // Reset Form Field Values
+    this.fullName = '';
+    this.address = '';
+    this.cardNumber = '';
   }
 }

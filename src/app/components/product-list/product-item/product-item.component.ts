@@ -22,7 +22,9 @@ export class ProductItemComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
-    this.cartService.addItem({ product, quantity: this.quantity });
-    alert(`${product.name} ${product.name.slice(-1) === 's' ? 'have' : 'has'} been added to the cart. 🛒`);
+    const isAdded = this.cartService.addItem({ product, quantity: this.quantity });
+    if (isAdded) {
+      alert(`${product.name} ${product.name.slice(-1) === 's' ? 'have' : 'has'} been added to the cart. 🛒`);
+    }
   }
 }

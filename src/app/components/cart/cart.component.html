@@ -1,11 +1,11 @@
 <div class="cart-container" *ngIf="items.length">
 
   <div class="cart-panel">
-    <app-cart-item *ngFor="let item of items" [item]="item"></app-cart-item>
+    <app-cart-item *ngFor="let item of items" [item]="item" (removeItemFromCart)="removeItem(item)"></app-cart-item>
     <h3>Total: ${{ getTotalPrice() }}</h3>
   </div>
 
-  <app-cart-form class="cart-panel"></app-cart-form>
+  <app-cart-form class="cart-panel" (onSubmitForm)="onOrderSubmit()"></app-cart-form>
 </div>
 
 <div class="no-data-container" *ngIf="!items.length">
