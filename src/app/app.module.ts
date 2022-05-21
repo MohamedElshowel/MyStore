@@ -12,7 +12,7 @@ import { ProductItemDetailsComponent } from './components/product-item-details/p
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 import { CartFormComponent } from './components/cart/cart-form/cart-form.component';
-import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     CartComponent,
     CartItemComponent,
     CartFormComponent,
-    ConfirmationComponent,
+    OrderConfirmationComponent,
   ],
   imports: [
     BrowserModule,

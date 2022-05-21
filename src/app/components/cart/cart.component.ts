@@ -21,7 +21,7 @@ export class CartComponent implements OnInit {
   onOrderSubmit() {
     this.cartService.emptyCartItems();
     this.items = [];
-    this.router.navigate(['/confirmation']);
+    this.router.navigate(['/success']);
   }
 
   getTotalPrice(): string {
