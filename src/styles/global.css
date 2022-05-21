@@ -33,3 +33,8 @@ button:hover {
   background-color: #1c6988;
   cursor: pointer;
 }
+
+button:disabled {
+  cursor: no-drop;
+  background-color: #b8c2c5;
+}
