@@ -2,7 +2,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 70%;
+  max-width: min(100%, 90vw);
   margin: 0 auto;
 }
 
@@ -15,4 +15,11 @@ form > * {
   font-style: italic;
   font-size: smaller;
   padding-bottom: 10px;
+}
+
+.form-errors-container {
+  max-width: min(100%, 90vw);
+  font-size: 11pt;
+  margin: 20px auto;
+  color: darkred;
 }

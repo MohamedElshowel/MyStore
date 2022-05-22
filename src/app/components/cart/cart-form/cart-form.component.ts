@@ -13,13 +13,14 @@ export class CartFormComponent implements OnInit {
   fullName: string = '';
   address: string = '';
   creditCardNum: number | string = '';
+  isValidCreditCard: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
+  onSubmit(): void {
     const userData: Order = {
       fullName: this.fullName,
       address: this.address,
@@ -30,5 +31,9 @@ export class CartFormComponent implements OnInit {
     this.fullName = '';
     this.address = '';
     this.creditCardNum = '';
+  }
+
+  validateCreditCardInput(): void {
+    this.isValidCreditCard = !isNaN(+this.creditCardNum) && this.creditCardNum.toString().length === 16;
   }
 }
