@@ -40,6 +40,13 @@ img {
   color: #1c6988;
 }
 
+.no-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .no-data-message {
-  margin-top: 64px;
+  margin: 100px auto 45px;
+  text-align: center;
 }

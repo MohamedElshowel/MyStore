@@ -19,7 +19,8 @@
     </div>
   </div>
 
-  <div *ngIf="!product">
-    <h3 class="no-data-message">Sorry! This product is not available</h3>
+  <div class="no-data-container" *ngIf="!product">
+    <h3 class="no-data-message">Sorry, This product is not available!</h3>
+    <button class="back-btn" routerLink="/">Browse product list</button>
   </div>
 </div>
